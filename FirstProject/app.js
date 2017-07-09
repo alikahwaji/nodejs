@@ -1,1 +1,3 @@
-creating an app js file
+// creating an app js file
+
+console.log('Hello world');
