@@ -1,8 +1,12 @@
-console.log('Strating notes.js');
-
 // console.log(module);
-
 // module.exports.age = 25;
+// module.exports.addNumber =  (a,b) => {
+//     // console.log('addNumber');
+//     return a+b;
+// }
+/*----------------------------------------------*/
+
+console.log('Strating notes.js');
 
 module.exports.addNote = () => {
     console.log('addNote');
@@ -10,7 +14,4 @@ module.exports.addNote = () => {
 
 }
 
-module.exports.addNumber =  (a,b) => {
-    // console.log('addNumber');
-    return a+b;
-}
+
