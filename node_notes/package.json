@@ -8,5 +8,8 @@
   },
   "keywords": [],
   "author": "Ali Kahwaji",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "^4.17.4"
+  }
 }

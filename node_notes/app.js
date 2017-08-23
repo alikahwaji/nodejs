@@ -1,5 +1,6 @@
 console.log('Starting App')
 
+const _ = require('lodash')
 const fs = require('fs')
 const os = require('os')
 const notes = require('./notes')
@@ -18,6 +19,13 @@ console.log(resultDiv)
 
 var resultMulti = notes.multiNumbers(20, 4)
 console.log(resultMulti)
+
+console.log(_.isString(true))
+console.log(_.isString(34))
+
+var filterArray = _.uniq(['Ali', 2, 'Ali', 1, 2, 3, 4])
+
+console.log(filterArray)
 
 // var user = os.userInfo()
 
