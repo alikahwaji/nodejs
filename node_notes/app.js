@@ -1,8 +1,8 @@
 console.log('Starting App')
 
 const _ = require('lodash')
-const fs = require('fs')
-const os = require('os')
+// const fs = require('fs')
+// const os = require('os')
 const notes = require('./notes')
 
 var res = notes.addNote()
@@ -23,11 +23,11 @@ console.log(resultMulti)
 console.log(_.isString(true))
 console.log(_.isString(34))
 
-var filterArray = _.uniq(['Ali', 2, 'Ali', 1, 2, 3, 4])
+var filterArray = _.uniq(['Ali', 2, 'Ali', 1])
 
 console.log(filterArray)
 
-// var user = os.userInfo()
+// var user = os.userInfo() 
 
 // fs.appendFile('greeting.txt', ` Hello ${user.username} ! You are ${notes.age}. `)
 
