@@ -2,23 +2,27 @@ console.log('Starting App')
 
 const _ = require('lodash')
 const fs = require('fs')
+const yargs = require('yargs')
 
 const notes = require('./notes')
 
+const argv = yargs.argv
 var command = process.argv[2]
 console.log('Command : ', command)
-console.log(process.argv)
+console.log('Yargs', argv)
 
 if (command === 'add') {
-  console.log('Adding new note')
+  notes.addNote(argv.title, argv.body)
 } else if (command === 'list') {
-  console.log('listing all the note')
+  notes.listNote()
 } else if (command === 'read') {
-  console.log('Fetaching a note')
+  notes.readNote(argv.title)
 } else if (command === 'remove') {
-  console.log('Removing a note')
+  notes.removeNote(argv.title)
 } else if (command === 'edit') {
-  console.log('Editing a note')
+  notes.editNote(argv.title)
 } else {
   console.log('Command not found')
 }
+
+// Yargs is a npm package that help us to parser .
