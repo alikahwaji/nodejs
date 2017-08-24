@@ -7,7 +7,7 @@ const yargs = require('yargs')
 const notes = require('./notes')
 
 const argv = yargs.argv
-var command = process.argv[2]
+var command = argv._[0]
 console.log('Command : ', command)
 console.log('Yargs', argv)
 
@@ -26,3 +26,7 @@ if (command === 'add') {
 }
 
 // Yargs is a npm package that help us to parser .
+// using process.argv in parsering can be hard, we have to write alot
+// of code to parse out the hyphens , the equal and the optional qoutes.
+// Yargs do all that and put it on an object to access it.
+//
