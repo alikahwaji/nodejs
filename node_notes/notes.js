@@ -38,7 +38,10 @@ var readNote = (title) => {
 }
 
 var removeNote = (title) => {
-  console.log('Rmoving notes', title)
+  var notes = fetchNotes()
+  var filterNotes = notes.filter((note) => note.title !== title)
+  saveNotes(filterNotes)
+  return notes.length !== filterNotes.length
 }
 
 var editNote = (title) => {
