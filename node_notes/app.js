@@ -20,7 +20,9 @@ if (command === 'add') {
     console.log('Note taken')
   }
 } else if (command === 'list') {
-  notes.listNote()
+  var listNotes = notes.listNote()
+  console.log(`Printing ${listNotes.length} note(s)`)
+  listNotes.forEach((note) => notes.logNote(note))
 } else if (command === 'read') {
   var note = notes.readNote(argv.title)
   if (note) {

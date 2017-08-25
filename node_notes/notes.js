@@ -30,7 +30,7 @@ var addNote = (title, body) => {
 }
 
 var listNote = () => {
-  console.log('Listing Notes')
+  return fetchNotes()
 }
 
 var readNote = (title) => {
