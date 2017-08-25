@@ -1,4 +1,3 @@
-console.log('Starting App')
 
 const _ = require('lodash')
 const fs = require('fs')
@@ -8,8 +7,6 @@ const notes = require('./notes')
 
 const argv = yargs.argv
 var command = argv._[0]
-console.log('Command : ', command)
-console.log('Yargs', argv)
 
 if (command === 'add') {
   var note = notes.addNote(argv.title, argv.body)

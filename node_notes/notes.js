@@ -1,4 +1,3 @@
-console.log('Starting Notes')
 
 const fs = require('fs')
 
