@@ -12,7 +12,7 @@ var geocodeAddress = (address) => {
       } else if (body.status === 'ZERO_RESULTS') {
         reject('Unble to find the address.') 
       } else if (body.status === 'OK') {
-        resolve(null, {
+        resolve(undefined, {
           address: body.results[0].formatted_address,
           Latitude: body.results[0].geometry.location.lat,
           Longitude: body.results[0].geometry.location.lng
