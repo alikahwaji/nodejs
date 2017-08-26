@@ -11,7 +11,7 @@ var geocodeAddress = (address, callback) => {
     } else if (body.status === 'ZERO_RESULTS') {
       callback('Unble to find the address.') 
     } else if (body.status === 'OK') {
-      callback(undefined, {
+      callback(null, {
         address: body.results[0].formatted_address,
         Latitude: body.results[0].geometry.location.lat,
         Longitude: body.results[0].geometry.location.lng
