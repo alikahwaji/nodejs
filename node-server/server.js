@@ -1,9 +1,11 @@
 const express = require('express')
+const hbs = require('hbs')
 
 var app = express()
 
-app.use(express.static(__dirname+ '/public'))
 
+app.use(express.static(__dirname+ '/public'))
+app.set('view engine', 'hbs')
 app.get('/', (req, res) => {
   // res.send('<h1>Hello and woelcome to the weather app</h1>')
   res.send({
@@ -15,8 +17,11 @@ app.get('/', (req, res) => {
   })
 })
 
-app.get('/about', (req, res) => {
-  res.send('About us')
+app.get('/view', (req, res) => {
+  res.render('view.hbs', {
+    pageTitle: 'About our page',
+    currentYear: new Date().getFullYear()
+  })
 })
 
 app.get('/error', (req, res) => {
