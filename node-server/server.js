@@ -2,7 +2,7 @@ const express = require('express')
 
 var app = express()
 
-app.use(express.static(__dirname+ '/'))
+app.use(express.static(__dirname+ '/public'))
 
 app.get('/', (req, res) => {
   // res.send('<h1>Hello and woelcome to the weather app</h1>')
@@ -25,4 +25,6 @@ app.get('/error', (req, res) => {
   })
 })
 
-app.listen(3000)
+app.listen(3000, () => {
+  console.log('Port listening on 3000')
+})
