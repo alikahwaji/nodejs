@@ -3,17 +3,14 @@ const hbs = require('hbs')
 
 var app = express()
 
-
-app.use(express.static(__dirname+ '/public'))
+app.use(express.static(__dirname + '/public'))
 app.set('view engine', 'hbs')
+
 app.get('/', (req, res) => {
-  // res.send('<h1>Hello and woelcome to the weather app</h1>')
-  res.send({
-    name: 'Ali',
-    likes: [
-      'Barcelona',
-      'Messi'
-    ]
+  res.render('home.hbs', {
+    homeTitle: 'Welcome to our company',
+    homeMessage: 'Our company provides good coffee',
+    currentYear: new Date().getFullYear()
   })
 })
 
