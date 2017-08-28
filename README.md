@@ -1,1 +1,3 @@
 Creating a read me file
+
+JWT_SECRET=qVBY9f2_rDFr7JZk4I9_h3jduU9werO9ChJZV1Go2F_O49GQ5HhL4kQeGs6pdF7V
