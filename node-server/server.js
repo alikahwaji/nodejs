@@ -7,18 +7,24 @@ hbs.registerPartials(__dirname + '/views/partials')
 app.use(express.static(__dirname + '/public'))
 app.set('view engine', 'hbs')
 
+hbs.registerHelper('getCurrentYear', () => {
+  return new Date().getFullYear()
+})
+
+hbs.registerHelper('screamIt', (text) => {
+  return text.toUpperCase()
+})
+
 app.get('/', (req, res) => {
   res.render('home.hbs', {
     homeTitle: 'Welcome to our company',
-    homeMessage: 'Our company provides good coffee',
-    currentYear: new Date().getFullYear()
+    homeMessage: 'Our company provides good coffee'
   })
 })
 
 app.get('/view', (req, res) => {
   res.render('view.hbs', {
-    pageTitle: 'About our page',
-    currentYear: new Date().getFullYear()
+    pageTitle: 'About our page'
   })
 })
 
