@@ -15,3 +15,17 @@ it('Should square a number', () => {
     throw new Error(`Expected 100, but got ${res}.`)
   }
 })
+
+it('Should sub two numbers', () => {
+  var res = utils.sub(5, 4)
+  if( res !== 1) {
+    throw new Error(`Expected 1, but got ${res}.`)
+  }
+})
+
+it('Should div two numbers', () => {
+  var res = utils.div(30, 10)
+  if(res !== 3) {
+    throw new Error(`Expected 3, but got ${res}.`)
+  }
+})
