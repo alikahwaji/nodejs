@@ -4,4 +4,10 @@ module.exports.square = (x) => x * x
 
 module.exports.sub = (a, b) => a - b
 
-module.exports.div = (a, b) => a / b 
+module.exports.div = (a, b) => a / b
+
+module.exports.setName = (user, fullName) => {
+  var names = fullName.split(' ')
+  user.firstName = names[0]
+  user.lastName = names[1]
+}

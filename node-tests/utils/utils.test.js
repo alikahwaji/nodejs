@@ -22,3 +22,20 @@ it('Should div two numbers', () => {
   var res = utils.div(30, 10)
   expect(res).toBe(3).toBeA('number')
 })
+
+it('Should expect some values', () => {
+  // expect(12).toNotBe(12)
+  expect({name: 'Ali'}).toEqual({name: 'Ali'})
+})
+
+it('Should test an object', () => {
+  expect({
+    name: 'Ali',
+    age: 37,
+    location: 'Auckland'
+  }).toInclude ({
+    age: 37
+  }).toExclude ({
+    age: 45
+  })
+})
