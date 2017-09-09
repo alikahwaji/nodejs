@@ -39,3 +39,13 @@ it('Should test an object', () => {
     age: 45
   })
 })
+
+it('Should set first name and last name', () => {
+  var user = {location: 'Auckland', age: 37}
+  var res = utils.setName(user, 'Ali Kahwaji')
+
+  expect(res).toInclude({
+    firstName: 'Ali',
+    lastName: 'Kahwaji'
+  })
+})
