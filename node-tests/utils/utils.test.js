@@ -7,10 +7,24 @@ it('should add two numbers', () => {
   expect(res).toBe(50).toBeA('number')
 })
 
+it('Should Add two numbers async', (result) => {
+  utils.asyncAdd(4, 3, (sum) => {
+    expect(sum).toBe(7).toBeA('number')
+    result()
+  })
+})
+
 it('Should square a number', () => {
   var res = utils.square(10)
 
   expect(res).toBe(100).toBeA('number')
+})
+
+it('Should square two async numbers', (done) => {
+  utils.asyncSquare(20, (squ) => {
+    expect(squ).toBe(400).toBeA('number')
+    done()
+  })
 })
 
 it('Should sub two numbers', () => {
@@ -18,9 +32,23 @@ it('Should sub two numbers', () => {
   expect(res).toBe(1).toBeA('number')
 })
 
+it('Should sub two async numbers', (res) => {
+  utils.asyncSub(10, 3, (sub) => {
+    expect(sub).toBe(7).toBeA('number')
+    res()
+  })
+})
+
 it('Should div two numbers', () => {
   var res = utils.div(30, 10)
   expect(res).toBe(3).toBeA('number')
+})
+
+it('Should div two async numbers', (res) => {
+  utils.asyncDiv(100, 20, (div) => {
+    expect(div).toBe(5).toBeA('number')
+    res()
+  })
 })
 
 it('Should expect some values', () => {
