@@ -3,27 +3,32 @@ const expect = require('expect')
 
 var app = require('./server').app
 
-it('Should return company welcoming', (done) => {
-  request(app)
-    .get('/')
-    .expect(200)
-    .expect((res) => {
-      expect(res.body).toInclude({
-        error: 'Page not found'
-      })
+describe('Server', () => {
+  describe('Get', () => {
+    it('Should return company welcoming', (done) => {
+      request(app)
+        .get('/')
+        .expect(200)
+        .expect((res) => {
+          expect(res.body).toInclude({
+            error: 'Page not found'
+          })
+        })
+        .end(done)
     })
-    .end(done)
-})
-
-it('Should return my users object', (done) => {
-  request(app)
-    .get('/users')
-    .expect(200)
-    .expect((res) => {
-      expect(res.body).toInclude({
-        name: 'Mahmood Kahwaji',
-        age: 2
-      })
+  })
+  describe('Get /users', () => {
+    it('Should return my users object', (done) => {
+      request(app)
+        .get('/users')
+        .expect(200)
+        .expect((res) => {
+          expect(res.body).toInclude({
+            name: 'Mahmood Kahwaji',
+            age: 2
+          })
+        })
+        .end(done)
     })
-    .end(done)
+  })
 })
