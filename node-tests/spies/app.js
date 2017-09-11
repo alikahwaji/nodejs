@@ -1,5 +1,5 @@
 var db = require('./db.js')
-module.exports.handleSingup = (email, password) => {
+module.exports.handleSignup = (email, password) => {
   // Check if email aleardy exists
   db.saveUser({email, password})
   // Save the user to the database
