@@ -8,7 +8,7 @@ describe('Server', () => {
     it('Should return company welcoming', (done) => {
       request(app)
         .get('/')
-        .expect(200)
+        .expect(404)
         .expect((res) => {
           expect(res.body).toInclude({
             error: 'Page not found'
