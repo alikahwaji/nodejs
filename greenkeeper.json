@@ -1,0 +1,12 @@
+{
+  "groups": {
+    "default": {
+      "packages": [
+        "node-server/package.json",
+        "node_notes/package.json",
+        "node_weather/Async/package.json",
+        "node_weather/package.json"
+      ]
+    }
+  }
+}
